@@ -1,7 +1,7 @@
 --- 
 # Tiny Tapeout project information
 project:
-  wokwi_id:    382769778541613057        # If using wokwi, set this to your project's ID
+  wokwi_id:    382833434609189889        # If using wokwi, set this to your project's ID
 
 # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
 # Source files must be in ./src and you must list each source file separately
@@ -24,7 +24,7 @@ documentation:
   author:       "neha"      # Your name
   title:        "sample schematic"      # Project title
   language:     "Wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  description:  ""      # Short description of what your project does
+  description:  "Sample two-bit Adder"      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
@@ -36,9 +36,9 @@ documentation:
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
-    - none
-    - none
-    - none
+    - ui[0]: "A"
+    - ui[1]: "B"
+    - ui[2]: "Cin"
     - none
     - none
     - none
@@ -46,14 +46,14 @@ documentation:
     - none
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
+    - uo[0]: "S"
     - segment b
     - segment c
     - segment d
     - segment e
     - segment f
     - segment g
-    - dot
+    - uo[5]: "Cout"
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - none
